@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Protection Privacy</title>
+ 
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrapmin.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="portfolioitem.css" rel="stylesheet">
+
+  </head>
+
+  
+   <script>
+$(document).ready(function()
+{   
+
+
+    // handle button clicks         
+  
+   $("#buttonme").click(function(){
+    alert($('#formID').serialize());
+    var link1=$("#link1").html();
+    //alert(link1);
+    var savernum = window.localStorage.getItem("rnum");
+    alert(savernum);
+    
+    var combined="link1="+link1+"&rnum="+savernum;
+    $.ajax(
+      
+      {
+      url: "http://port-9003.mcwebproject2018-keith0080mscoding205179.codeanyapp.com/homepage002", 
+      type: 'POST',
+      data: combined, 
+      success: function(result){
+        //alert("ddd");
+      alert("return="+result);  
+        if(result==good){
+          windows.location="/Logined";
+        }
+     // $("#div1").html(result);
+          },error: function (xhr, textStatus, errorThrown) {
+alert("error1="+textStatus);
+                         console.log(textStatus);
+
+                     }
+      }
+    );
+  });
+});
+</script>
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">Protection private</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+               <a class="nav-link" href="/home">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+           <li class="nav-item">
+              <a class="nav-link" href="/Login">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/Signup">Signup</a>
+            </li>
+              <li class="nav-item">
+              <a class="nav-link" href="/favoritelist">Favorite List</a>
+            </li>
+             <li class="nav-item">
+              <a class="nav-link" href="/SeachList">Website Map</a>
+              <li class="nav-item">
+              <a class="nav-link" href="/searchuser">Search</a>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+      <!-- Portfolio Item Heading -->
+      <h1 class="my-4">Protection Privacy
+        <small>E-mail is danger</small>
+      </h1>
+
+      <!-- Portfolio Item Row -->
+      <div class="row">
+
+        <div class="col-md-8">
+          <img src="https://ips.plug.it/cips/tecnologia/cms/2017/02/e-mail-1.jpg" alt="W3Schools.com" width="750" height="500">
+        </div>
+
+        <div class="col-md-4">
+          <h3 class="my-3">Everyday there are many E-mail were send and receive. However, there will be some E-mail was created by some hacker. They would like to steal your privacy data</h3>
+          <p>
+
+          <h3 class="my-3">Three points let you more saftly</h3>
+          <ul>
+            <li>If you receiced the E-mail from unknown source. Do not open and delete it</li>
+            <li>If the E-mail was send by the bank, please call to bank to confrom were they send the E-mail to you</li>
+            <li>Do not reply E-mail from unknown source</li>
+            <br>
+            <br>
+            
+  
+            <br>
+            
+          </ul>
+        </div>
+
+      </div>
+      <!-- /.row -->
+
+      <!-- Related Projects Row -->
+     
+
+      <div class="row">
+
+       <div id = "link1">
+    http://port-9003.mcwebproject2018-keith0080mscoding205179.codeanyapp.com/homepage002
+  
+        <br><br>
+         <button id="buttonme">
+    Save as Favorite
+  </button>
+<br><br>
+        
+
+        
+
+       
+
+      </div>
+      <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2018</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="jquerymin.js"></script>
+    <script src="bootstrapbundlemin.js"></script>
+
+  </body>
+
+</html>
